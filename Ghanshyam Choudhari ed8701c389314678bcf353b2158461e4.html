@@ -1,0 +1,699 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Ghanshyam Choudhari</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ed8701c3-8931-4678-bcf3-53b2158461e4" class="page sans"><header><img class="page-cover-image" src="Ghanshyam%20Choudhari%20ed8701c389314678bcf353b2158461e4/cover2.png" style="object-position:center 39.38%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Ghanshyam%20Choudhari%20ed8701c389314678bcf353b2158461e4/my-avatar.png"/></div><h1 class="page-title">Ghanshyam Choudhari</h1></header><div class="page-body"><div id="7d297522-7f61-4440-8873-052106d267f8" class="column-list"><div id="29311546-ca30-462a-808f-c8b2e39d6963" style="width:50%" class="column"><blockquote id="ce1ace65-e623-41bc-bd2c-b57c0053f98e" class="">Email: ghanshyam.choudhari@outlook.com</blockquote></div><div id="badf397b-2a4b-4139-8cf7-391aa48a80fd" style="width:50%" class="column"><blockquote id="70caaf91-fe56-45c7-ad73-8fe93848e10f" class="">Phone: 8446297369</blockquote></div></div><h1 id="667aeded-dad0-4288-bf4c-84865f39d6a9" class="">Professional Summary</h1><ul id="c7312758-24d1-4f4b-90d4-4746c20b0cf6" class="bulleted-list"><li style="list-style-type:disc">Ghanshyam comes with 7.5 years of experience in analysis, design, development, and testing of
+Salesforce solutions.</li></ul><ul id="82dfd473-5032-4457-bb9e-7c709bf200c5" class="bulleted-list"><li style="list-style-type:disc">Ownership for end-to-end solution delivery for their respective tracks.</li></ul><ul id="bcc9604d-2bb9-4b99-ab04-d2f08966546e" class="bulleted-list"><li style="list-style-type:disc">Work closely with various teams to define and implement elegant, scalable and sustainable technical solutions using the Salesforce technologies.</li></ul><ul id="17b355c5-ea98-4939-a06d-3d7b26009c42" class="bulleted-list"><li style="list-style-type:disc">Good understanding of design principles, technically scalable data modeling, Force.com development standard methodologies.</li></ul><ul id="56525372-d74a-4001-a9a3-22f9ea2f151c" class="bulleted-list"><li style="list-style-type:disc">Extensive Experience in SFDC Development using Lightning Web Components, Lightning Aura
+Components, Lightning Design System for React, VisualForce Pages, VisualForce Components,
+<a href="http://force.com/">Force.com</a> Sites, Apex, SOQL, Integration (SOAP, REST)</li></ul><ul id="fa0ef4ae-1f2d-40fd-949c-ce5e20bda29f" class="bulleted-list"><li style="list-style-type:disc">Hands-on experience in one or more of the following tools: Copado ,Flosum, Welkin Suite, GitHub, GitLab, SFDCDX and Bitbucket etc.</li></ul><ul id="45a5b6ef-c136-4084-bc9d-ffde6d1c95ca" class="bulleted-list"><li style="list-style-type:disc">Experienced in working with the VS code IDE, scratch org, <a href="http://salesforce.com/">salesforce.com</a> Sandbox
+environments, and production</li></ul><ul id="d4a8fe6d-e97d-4c62-8db5-44a76f830e3f" class="bulleted-list"><li style="list-style-type:disc">Collaborate with colleagues and customers to create prototypes and proofs of concept for defining requirements.</li></ul><ul id="e5020342-6aab-4387-803a-0d1e90df5c71" class="bulleted-list"><li style="list-style-type:disc">Work with stakeholders and portfolio and solution architects to identify reasonable migration paths from the current state to target architectures.</li></ul><ul id="ba084875-8091-4e4e-a013-987d4a3623e7" class="bulleted-list"><li style="list-style-type:disc">Work with internal technical team members representing back office applications to design seamless integration between the applications.</li></ul><ul id="adf8784c-f23b-4c63-b6ea-59d3b90a003d" class="bulleted-list"><li style="list-style-type:disc">Experience defining technical scope and providing detailed Salesforce system and functional designs</li></ul><ul id="7043b0c5-5495-4610-a64a-6134fa390df9" class="bulleted-list"><li style="list-style-type:disc">Excellent knowledge of Salesforce APIs and hands-on experience on integration with back-end systems (NGBS, SAP, etc).</li></ul><ul id="a39ee3e3-3196-40be-ac4a-11aad618f92b" class="bulleted-list"><li style="list-style-type:disc">Has a complete understanding of Salesforce Coding Best Practices and Standards.</li></ul><ul id="ccdebf02-7cdd-457e-87ce-77e61cc3511e" class="bulleted-list"><li style="list-style-type:disc">Experience working in a fast paced, large organization where multiple projects are implemented on the same platform.</li></ul><h1 id="4af857c7-e011-4311-ac07-bf3bc2d01bfe" class="">Skills Summary</h1><div id="32fa8184-5991-472c-a500-ce6c02bf8af3" class="column-list"><div id="f0c206de-6085-4727-8e17-7d55eb8c48fb" style="width:50%" class="column"><p id="0a016c3b-9631-4d61-ac6f-95a7ba92f88a" class="">Lightning Web Components</p><p id="94cc3ed6-2b7c-4cf7-8d48-e38fd8144069" class="">Lightning Aura Components</p><p id="4a064395-0bd2-4e4c-b8c6-bff7e82d8780" class="">Visualforce Pages</p><p id="da19d057-20a8-4bc2-a0b3-50f4fe32dcbe" class="">Apex</p><p id="e1f5fc82-5015-4932-b531-77fa86629b14" class="">Bootstrap</p><p id="0f81b4bc-aa22-4315-9004-e3ada0e82976" class="">SLDS</p></div><div id="c24bbf86-c17e-4917-9f76-522dfbcec3b9" style="width:50%" class="column"><p id="a630c316-82e2-40cf-9378-254d4546e97f" class="">REST API</p><p id="1df64973-7d50-4b04-8dc4-a2ca61ccb134" class="">JavaScript</p><p id="fb05bd1f-5d43-4242-8643-02cee436cd45" class="">HTML</p><p id="2fa2a442-dfce-428a-926d-0f3253db806a" class="">CSS</p><p id="c7b1dcf4-0635-400d-9c25-0b6ba9c822ff" class="">jQuery</p><p id="803711cb-58fd-43ba-b1c5-e9718a5f0ab8" class="">LDS for React JS</p></div></div><h1 id="d5fb89a9-c66d-4787-91ed-28cb1d467e62" class="">Certification</h1><div id="2eb3e2b2-2053-4d58-a4de-ec0e96c87251" class="column-list"><div id="4daa08e9-7255-4c44-b73d-8597a6421347" style="width:50%" class="column"><p id="120e76a5-8039-4ab1-81e9-8bd00c9ebf2b" class="">Salesforce Certified Application Architect</p><p id="8f51d3f7-7800-49dd-a528-7445483c9474" class="">Salesforce Certified Advanced Administrator</p><p id="26401add-8bdb-4472-9ccb-233d8050cf17" class="">Salesforce Certified Platform Developer I</p><p id="c6dd56b7-c4a0-414c-8c6e-5c7d0016cfed" class="">Salesforce Certified Sharing and Visibility Architect</p></div><div id="05b09e86-e47d-4ccc-8ef1-68c4fe60275f" style="width:50%" class="column"><p id="8e343010-c900-47cb-8b46-d00246edeacd" class="">Salesforce Certified Integration Architect</p><p id="72a6e0f0-87ff-498e-8b79-aba2c620481c" class="">Salesforce Certified Data Architect</p><p id="e9076a6c-18be-439f-8104-5e12eafb1799" class="">Salesforce Certified Service Cloud Consultant</p><p id="5218307c-c7aa-4fe8-ad5d-bcc856050d1f" class="">Salesforce Certified Platform App Builder</p><p id="bcf61cc1-41f6-4efe-b286-9f772403dc61" class="">Salesforce Certified Administrator</p></div></div><h1 id="a0b3a792-0688-4cf5-a9a7-f9f502a44929" class="">Achievements</h1><ul id="83afb6ec-a7b4-49e4-9a01-1ea250e629a4" class="bulleted-list"><li style="list-style-type:disc">3rd rank in the Salesforce hackathon across India. (Total participants 3500+)</li></ul><h1 id="1d844cd7-cc3a-496f-8c63-1b94a8965b00" class="">Industry Experience</h1><h2 id="937760ee-22f9-49f3-909e-d07832f947f2" class="">RingCentral Inc.</h2><p id="0d890d06-2826-4e4e-bcfe-9f59cbd1c5c8" class=""><strong>Project Name:</strong> RingCentral Quote to Cash</p><p id="be2fa9d9-9e1a-4eeb-b058-fe6f9bfadd65" class=""><strong>Project Overview:</strong> Bulk API 2.0 Integration with .NET , Salesforce Sales Cloud Enhancement and Component Deployments</p><p id="90af9edb-8288-4784-a7a8-314ce68249fe" class=""><strong>Role:</strong> Senior Salesforce DevOps Engineer</p><p id="daa089f8-8513-4f33-8e35-76ee5a7c7ff4" class=""><strong>Responsibilities</strong></p><ul id="7138c49b-6de5-4cfb-86f2-7653414b3e66" class="bulleted-list"><li style="list-style-type:disc">Describe and illustrate designs with appropriate justifications.</li></ul><ul id="1f9dcb74-6c23-428e-be28-08a46556c3e5" class="bulleted-list"><li style="list-style-type:disc">Interacted with business users at a technical level</li></ul><ul id="5ac2098e-c049-4f61-bea8-212a1ca9d47e" class="bulleted-list"><li style="list-style-type:disc">Designed and developed LWC, Apex Classes, and Apex Triggers for various functional needs in
+the application.</li></ul><ul id="03e9872d-d782-45e5-822e-3765720a9760" class="bulleted-list"><li style="list-style-type:disc">Act as a release manager, approving configuration and coded items to be deployed between environments.</li></ul><ul id="368e0469-d23f-4f53-8179-e91e779f0885" class="bulleted-list"><li style="list-style-type:disc">Experienced in performing code reviews on modules developed by team and on existing functionalities and propose on improvements</li></ul><ul id="1bab11fb-c117-4d37-9e49-c8860282ed73" class="bulleted-list"><li style="list-style-type:disc">Communicate in project teams regarding status, technical issues, and creative solution</li></ul><ul id="27a2051b-5113-4750-9d8f-2e17cd72ca4e" class="bulleted-list"><li style="list-style-type:disc">Identify &amp; highlight different risks involved and work on mitigation plans</li></ul><ul id="52769a2c-2177-4328-b601-4bcdb277ca16" class="bulleted-list"><li style="list-style-type:disc">Production support</li></ul><p id="52127cf3-eef0-49fd-add2-66f6f99b0d1b" class="">
+</p><h2 id="d8b87dbe-fdc7-4643-801d-e1b59f413342" class="">TEKsystems Global Services</h2><p id="327be52c-5d3d-4ab1-a500-e6c97a41e7d3" class=""><strong>Project Name:</strong> Adobe Renewal</p><p id="3c5c9345-921d-4d5d-9fc1-4d8d53fbaa4b" class=""><strong>Project Overview:</strong> Subscription Lifecycle (SLM ) tool to provide a complete view of the customer
+subscription journey</p><p id="75a1a867-65a3-4ed0-8c0e-0a3d1e280ace" class=""><strong>Role:</strong> Lead SFDC Developer</p><p id="4b3c0c9c-5b28-4cb1-9d92-b695c51527c9" class=""><strong>Responsibilities</strong>:</p><ul id="6cd09889-15a7-4676-92c1-7492fce36a47" class="bulleted-list"><li style="list-style-type:disc">Customer Journey View-Ability to manage a single customer view (Customer Journey) with an
+aggregated, consistent, and holistic view, which includes customer’s entitlement, purchase
+history, due events, and reminders/tasks. Users can also use the view to manage renewals based on their role.</li></ul><ul id="40902422-98a8-424f-9c25-4a73a52e3f6f" class="bulleted-list"><li style="list-style-type:disc">Reduced the error rate for identifying accurate entitlements. Additionally, it reduces time spent
+manually by Sales Ops and Renewal Specialists searching for customer records across multiple
+sources.</li></ul><ul id="0b303353-c28a-4de3-987c-3221d4c256d3" class="bulleted-list"><li style="list-style-type:disc">Designed and developed the Lightning design system&#x27;s React timeline to display opportunities on the timeline</li></ul><ul id="8a92dbba-f34f-44a5-816b-68cda91a913d" class="bulleted-list"><li style="list-style-type:disc">Developed Lightning Container Component API for fetching data from Salesforce to display on
+the timeline.</li></ul><ul id="143fabd4-dd6f-48ad-b6c7-32cf47b0b61b" class="bulleted-list"><li style="list-style-type:disc">Developed Lightning web components to use a mobile device’s camera and mobile OS platform features to scan a barcode, such as a UPC symbol or QR code.</li></ul><ul id="736213a2-fb96-438d-9bc1-f932304e97ec" class="bulleted-list"><li style="list-style-type:disc">Developed dynamic invoice generation with help of LWC and Visualforce page</li></ul><p id="8d25cdee-a9b4-4acd-b9e9-2762a08a3723" class="">
+</p><h2 id="d5c9e747-3fee-425d-bc6d-936735df738b" class="">CRMIT Solutions</h2><p id="36250562-076f-4228-9387-2f033ffc6c4f" class=""><strong>Project Name</strong>: Global Networking Project</p><p id="56abb6ef-f2a2-406c-b919-6180f4eb390a" class=""><strong>Project Overview:</strong> Over the course of ten weeks, over 1,000 users migrated from Classic to Lightning Experience.</p><p id="43168489-04af-4470-9ed6-7e8ab7c3f730" class=""><strong>Role: </strong>CX Cloud Developer</p><p id="28b67790-b975-46fb-b79b-de1f7c1e732a" class=""><strong>Responsibilities</strong></p><ul id="bdc0aa6a-ef47-4232-a8c8-4d7a6895fce8" class="bulleted-list"><li style="list-style-type:disc">Experience with using the Lightning Experience readiness support to plan migration activities.
+Hands-on experience on Magic Mover for migrating Classic Notes and Attachments to Lightning Notes and Files, respectively.</li></ul><ul id="3d0e8eab-fdd8-46f9-b7e4-9507d3b91f5e" class="bulleted-list"><li style="list-style-type:disc">Hands-on experience with the Lightning Experience Configuration Converter</li></ul><ul id="ee58328e-bb67-4272-af6e-542ee21fe114" class="bulleted-list"><li style="list-style-type:disc">Re-package VF customizations into Lightning compatible code.</li></ul><ul id="27531a3a-30d7-469e-abb8-25bc663884ba" class="bulleted-list"><li style="list-style-type:disc">Migrated from the Classic version of Conga Composer to a Lightning-compatible one.</li></ul><ul id="141a033c-833d-4685-a2cf-d8ffc6649648" class="bulleted-list"><li style="list-style-type:disc">Migrated to DocuSign for Lightning.</li></ul><ul id="763b67e6-0ea4-48db-b57e-fb2534a72b9b" class="bulleted-list"><li style="list-style-type:disc">Changed existing Community Visualforce pages to be Lightning compliant.</li></ul><ul id="bebd6559-ea58-4462-b2bc-c67493acc9bb" class="bulleted-list"><li style="list-style-type:disc">Changed JavaScript button &amp; Visualforce Page button into Lightning Actions</li></ul><ul id="5f5682c9-c8dd-4c5c-beb5-16cbc8d61358" class="bulleted-list"><li style="list-style-type:disc">Unit Testing</li></ul><ul id="e5495e3b-1471-4da0-8c75-f6e1b4216fc5" class="bulleted-list"><li style="list-style-type:disc">Peer Code reviews, Peer Testing</li></ul><p id="a5537863-114e-4080-91a3-3821d2e37684" class="">
+</p><p id="357a78c3-2a3f-45b0-8ef6-b169f94c4e0d" class=""><strong>Project Name</strong>: American Restaurant and Entertainment Project</p><p id="bc51d755-cc74-4520-a138-f939d4c6838e" class=""><strong>Role</strong>: Salesforce Developer</p><p id="c926adc6-7bb6-493f-8abb-bd7b873931f1" class=""><strong>Responsibilities</strong></p><ul id="ee0c68fc-5378-4b29-b050-af61a6691c7f" class="bulleted-list"><li style="list-style-type:disc">Designed and developed Apex Classes and Apex Triggers for various functional needs in the
+application.</li></ul><ul id="bc634d68-0ce3-4195-992a-76ee9177090a" class="bulleted-list"><li style="list-style-type:disc">Developed a custom solution for document generation in Salesforce Visualforce pages and
+Visualforce components.</li></ul><ul id="12a133f2-9111-4967-ae59-9b8a6d616d3b" class="bulleted-list"><li style="list-style-type:disc">Wrote controllers and test classes.</li></ul><p id="60ca20b1-2e61-44c5-9ade-31a4270a8141" class="">
+</p><p id="e3433147-6a42-49ca-a8dc-1fe0ef60b773" class=""><strong>Project Name: </strong>Leading Client Health Care Service Project</p><p id="edd2bae4-66b0-4560-bf1a-bdc215179d56" class=""><strong>Project Overview: </strong>Salesforce Sales and Service Cloud Enhancements over the period of a year</p><p id="ef037aa4-b915-45e7-9d1e-6c111c656362" class=""><strong>Responsibilities</strong></p><ul id="41678e14-8dd4-4577-966d-19a41c9d94b4" class="bulleted-list"><li style="list-style-type:disc">Designed, and developed Apex Classes and Apex Triggers for various functional needs in the
+application.</li></ul><ul id="9b7ea1c5-3fd3-40ab-9719-954ad0696c7d" class="bulleted-list"><li style="list-style-type:disc">Developed a custom solution for document generation in Salesforce lighting.</li></ul><ul id="e1f49801-3ccc-42ea-8f64-ccab3662251a" class="bulleted-list"><li style="list-style-type:disc">Implemented the business requirements using Batch Apex, Schedule Apex, and Future methods.</li></ul><ul id="3db23df1-e18a-404b-8846-860674049fc0" class="bulleted-list"><li style="list-style-type:disc">Designed Custom Pages using Controllers, Extensions, Components.</li></ul><ul id="a2ea7e51-a501-4418-a4c2-16dfd34e0f41" class="bulleted-list"><li style="list-style-type:disc">Used SOQL and SOSL with consideration to Governor Limits for data manipulation needs of the
+application using platform database objects.</li></ul><ul id="f14661c8-c5df-4348-91ff-aff93c74b876" class="bulleted-list"><li style="list-style-type:disc">Done migrations using Data Loader for insert, update, and bulk import or export of data from
+<a href="http://salesforce.com/">Salesforce.com</a> Objects. Used it to read, extract, and load data from comma separated values
+(CSV) files.</li></ul><ul id="bbd1c8ce-49ae-4944-a4d3-30ee8f386a75" class="bulleted-list"><li style="list-style-type:disc">Used the process automation tools.</li></ul><ul id="f5174de3-fc38-4765-97e9-7d802d386b03" class="bulleted-list"><li style="list-style-type:disc">Defined lookup and master-detail relationships on the objects and created junction objects to
+establish connectivity among objects.</li></ul><ul id="37db060a-e553-43fe-b05b-e41d163a2948" class="bulleted-list"><li style="list-style-type:disc">Developed and configured various reports and report folders for different user profiles based on the needs of the organization.</li></ul><p id="067ace43-0eff-4384-b3d2-29b330ab2a9d" class="">
+</p><h2 id="475c9e4d-080d-4060-82df-cfa15e6fae14" class="">Capgemini India</h2><p id="98a4dc1e-7a0c-4c84-a42c-3532c84c4ccb" class=""><strong>Project Name:</strong> Automotive Parts Project</p><p id="3851cea7-afda-4b78-aaa1-4ac3a71b451d" class=""><strong>Project Overview:</strong> Salesforce e-commerce cloud (CloudCraze AppExchange) enhancement.</p><p id="65e2975f-3bfb-4786-b5e8-4edefd9b7d29" class=""><strong>Role:</strong> Salesforce Developer</p><p id="4434df32-9fad-4ccc-b80a-96df4cb0e5aa" class=""><strong>Responsibilities</strong></p><ul id="b6e072d8-6df0-4e6e-959b-e12c584cdac5" class="bulleted-list"><li style="list-style-type:disc">Built CloudCraze ecommerce on Salesforce.</li></ul><ul id="3df29f95-f46f-454f-9d49-207df4b4a691" class="bulleted-list"><li style="list-style-type:disc">Platform with community collaboration.</li></ul><ul id="2d61b983-743c-49dd-94f5-ad4fc8bc5501" class="bulleted-list"><li style="list-style-type:disc">Enhancing and customizing storefront functionality.</li></ul><ul id="63868a1e-b813-4a73-9c8f-52113d3b3749" class="bulleted-list"><li style="list-style-type:disc">Validating forms using jQuery.</li></ul><ul id="78f685d1-1add-4080-8088-ebab21a95e5a" class="bulleted-list"><li style="list-style-type:disc">Customizing templates and UI changes.</li></ul><p id="da665a88-076f-4a32-bb7d-b68686248737" class="">
+</p><p id="b444aece-b437-403f-8cb3-c2cb8b66b9d7" class=""><strong>Project Name:</strong> Telecommunications Company</p><p id="0885e149-6e61-45ec-82dc-87d4e35209b5" class=""><strong>Project Overview:</strong> Salesforce community cloud enhancement project</p><p id="1bd19a2a-4007-4174-915a-7974d992e9e3" class=""><strong>Responsibilities</strong></p><ul id="908a3916-4fa1-413b-9765-b79b5b5ff750" class="bulleted-list"><li style="list-style-type:disc">Saved 230 Salesforce user licenses.</li></ul><ul id="a6db0dc1-f5cc-4492-8cf6-085bc7be7276" class="bulleted-list"><li style="list-style-type:disc">Developed a site with Visualforce pages &amp; controllers.</li></ul><ul id="7939423d-e180-4b50-9750-0b3ca752bc23" class="bulleted-list"><li style="list-style-type:disc">Optimizing Visualforce pages and Maintaining View State.</li></ul><ul id="eb706869-9e64-4c71-a9b9-5d55347b79e4" class="bulleted-list"><li style="list-style-type:disc">Involved in Jitterbit integration with the REST API.</li></ul><ul id="41f28f9a-01cd-4bca-a2ce-b02fd7e3b4d5" class="bulleted-list"><li style="list-style-type:disc">Used bootstrap and jQuery plugins to display data more responsively and attractively.</li></ul><p id="94ca967f-b2fc-4315-a4b1-6651596b4f0e" class="">
+</p><p id="57634aaa-3718-4a7f-85bd-4eeac1ad2589" class=""><strong>Project:</strong> Soft drink manufacturing company</p><p id="c8ccd3a7-71f6-474d-a9d4-ffcccb1ae7d0" class=""><strong>Project Overview</strong>: Salesforce Sales and Service cloud development and configuration .</p><p id="2b0ea4ba-6e35-4eb7-a29d-a57ccc482a9b" class=""><strong>Responsibilities</strong>:</p><ul id="dc983454-b036-48ff-be6a-b36853d08dd7" class="bulleted-list"><li style="list-style-type:disc">Created Users, Users&#x27; profiles, Validation rules, and Triggers</li></ul><ul id="6e8ffe56-187c-4977-8348-a702e4787c90" class="bulleted-list"><li style="list-style-type:disc">Developed process builder and workflow rule</li></ul><ul id="d7fe6361-0132-4ed3-884d-9e79fc54a23b" class="bulleted-list"><li style="list-style-type:disc">Importing and exporting data from the data loader</li></ul><ul id="94ccd40f-2814-4683-82d6-d200509ce6ac" class="bulleted-list"><li style="list-style-type:disc">Configured conga composer on Visualforce pages</li></ul><p id="f0fde9a0-ec88-4c4c-b043-b1281f9746fa" class="">
+</p><h1 id="c43e6c28-de25-47d3-8f9f-e719790c9faf" class="">Open Source Projects</h1><h2 id="5f64af64-c162-40bc-a50f-f62425005a1a" class="">Salesforce Lightning Print Preview</h2><ul id="d039b907-d7a6-440a-a765-6b4ec2551a1f" class="bulleted-list"><li style="list-style-type:disc">Developed chrome extension to print Salesforce lighting detail page with advanced configuration options.</li></ul><ul id="f1c41e62-a5bf-43f2-8472-b7ba6ac430ad" class="bulleted-list"><li style="list-style-type:disc">Available on Chrome Web Store</li></ul><p id="ba432fd0-c520-4008-a1b3-bf23a96fd138" class="">
+</p><h2 id="07b627aa-ff1b-4892-af87-f3c01d638127" class="">Enhance Salesforce Developer Console</h2><ul id="c8d3f0db-e7c0-43fb-aa0b-97825e8be7f2" class="bulleted-list"><li style="list-style-type:disc">Developed a chrome extension to beautify the Salesforce Developer Console with elegant
+themes.</li></ul><ul id="d5fc0aaa-336c-4522-ad72-913d9a58db5e" class="bulleted-list"><li style="list-style-type:disc">Available on Chrome Web Store</li></ul><p id="ba022757-ec8d-47d9-a55c-a959f2f996f9" class="">
+</p><h1 id="20324ede-97b7-45ad-85e6-79532b470904" class="">Education</h1><p id="8fe8f9ac-33c3-4599-a6b2-c11d853900cd" class="">Bachelor of Engineering in Information Technology (University of Mumbai)</p></div></article></body></html>
